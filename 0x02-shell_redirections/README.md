@@ -1,1 +1,1 @@
- This is lesson is about redirecting and filter in bash shell 
+ explanation of shell variables and expansions 
