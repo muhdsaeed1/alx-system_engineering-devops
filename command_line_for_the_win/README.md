@@ -1,0 +1,3 @@
+The Command Prompt, officially called the Windows Command Processor and often abbreviated to CMD, is the command line interface for Windows operating systems. A command line interface is a way of interacting with a computer directly using text commands.
+
+These hearken back to the early days of computers, when you had to type commands into a terminal to execute processes on the machine. Early PC operating systems, like MS-DOS, operated exclusively through command-line interfaces. There were no mouse cursor, window management, or similar graphical user interface (GUI) elements we take for granted today.
