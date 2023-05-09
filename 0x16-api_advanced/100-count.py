@@ -21,7 +21,8 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
         "count": count,
         "limit": 100
     }
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
     try:
         results = response.json()
         if response.status_code == 404:
@@ -42,5 +43,14 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
                     instances[word] = times
                 else:
                     instances[word] += times
+
+    if after is None:
+        if len(instances) == 0:
+            print("")
+            return
+        instances = sorted(instances.items(), key=lambda kv: (-kv[1], kv[0]))
+        [print("{}: {}".format(k, v)) for k, v in instances]
+    else:
+        count_words(subreddit, word_list, instances, after, count)
 
 
